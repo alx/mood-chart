@@ -1,0 +1,4 @@
+check process tatibot with pidfile /var/run/tatibot.pid
+  start program = "/path/tatibot/script/bot_control start"
+  stop  program = "/path/tatibot/script/bot_control stop"
+  if 5 restarts within 5 cycles then timeout

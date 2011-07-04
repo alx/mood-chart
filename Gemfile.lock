@@ -1,0 +1,107 @@
+GIT
+  remote: git@github.com:alx/jabber-bot.git
+  revision: 2032abd9123a15d6cfd53e00dec22f0f3e4f6f9a
+  specs:
+    jabber-bot (1.1.1)
+      xmpp4r-simple (>= 0.8.7)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    activerecord (1.6.0)
+    addressable (2.2.2)
+    daemons (1.1.4)
+    data_mapper (1.0.2)
+      dm-aggregates (= 1.0.2)
+      dm-constraints (= 1.0.2)
+      dm-core (= 1.0.2)
+      dm-migrations (= 1.0.2)
+      dm-serializer (= 1.0.2)
+      dm-timestamps (= 1.0.2)
+      dm-transactions (= 1.0.2)
+      dm-types (= 1.0.2)
+      dm-validations (= 1.0.2)
+    data_objects (0.10.2)
+      addressable (~> 2.1)
+    diff-lcs (1.1.2)
+    dm-aggregates (1.0.2)
+      dm-core (~> 1.0.2)
+    dm-constraints (1.0.2)
+      dm-core (~> 1.0.2)
+      dm-migrations (~> 1.0.2)
+    dm-core (1.0.2)
+      addressable (~> 2.2)
+      extlib (~> 0.9.15)
+    dm-do-adapter (1.0.2)
+      data_objects (~> 0.10.2)
+      dm-core (~> 1.0.2)
+    dm-migrations (1.0.2)
+      dm-core (~> 1.0.2)
+    dm-serializer (1.0.2)
+      dm-core (~> 1.0.2)
+      fastercsv (~> 1.5.3)
+      json_pure (~> 1.4)
+    dm-sqlite-adapter (1.0.2)
+      dm-do-adapter (~> 1.0.2)
+      do_sqlite3 (~> 0.10.2)
+    dm-timestamps (1.0.2)
+      dm-core (~> 1.0.2)
+    dm-transactions (1.0.2)
+      dm-core (~> 1.0.2)
+    dm-types (1.0.2)
+      dm-core (~> 1.0.2)
+      fastercsv (~> 1.5.3)
+      json_pure (~> 1.4)
+      stringex (~> 1.1.0)
+      uuidtools (~> 2.1.1)
+    dm-validations (1.0.2)
+      dm-core (~> 1.0.2)
+    do_sqlite3 (0.10.2)
+      data_objects (= 0.10.2)
+    extlib (0.9.15)
+    fastercsv (1.5.3)
+    i18n (0.6.0)
+    json_pure (1.4.6)
+    rack (1.2.1)
+    rack-test (0.5.6)
+      rack (>= 1.0)
+    rake (0.8.7)
+    rspec (2.1.0)
+      rspec-core (~> 2.1.0)
+      rspec-expectations (~> 2.1.0)
+      rspec-mocks (~> 2.1.0)
+    rspec-core (2.1.0)
+    rspec-expectations (2.1.0)
+      diff-lcs (~> 1.1.2)
+    rspec-mocks (2.1.0)
+    sinatra (1.1.0)
+      rack (~> 1.1)
+      tilt (~> 1.1)
+    stringex (1.1.0)
+    tilt (1.1)
+    uuidtools (2.1.1)
+    worker (0.1.1)
+      activerecord
+    xmpp4r (0.5)
+    xmpp4r-simple (0.8.8)
+      xmpp4r (>= 0.3.2)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  daemons
+  data_mapper
+  dm-aggregates
+  dm-core
+  dm-migrations
+  dm-sqlite-adapter
+  dm-timestamps
+  dm-validations
+  i18n
+  jabber-bot!
+  rack-test
+  rake
+  rspec
+  sinatra (>= 1.0)
+  worker
