@@ -23,7 +23,7 @@ get '/' do
 end
 
 get '/:username' do
-  erb :profile
   @mood = Profile.first(:name => params[:username]).formatted_output
+  erb :profile
 end
 
