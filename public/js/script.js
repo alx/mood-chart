@@ -87,21 +87,19 @@ function init(){
   });
 
   //load JSON data.
-  $.getJSON('mood.json', function(json) {
-    areaChart.loadJSON(json);
+  areaChart.loadJSON(mood);
 
     
-    //dynamically add legend to list
-    var legend = areaChart.getLegend(),
-        listItems = [];
+  //dynamically add legend to list
+  var legend = areaChart.getLegend(),
+      listItems = [];
 
-    for(var name in legend) {
-      listItems.push('<div class=\'query-color\' style=\'background-color:'
-                      + legend[name] +'\'>&nbsp;</div>' + name);
-    }
+  for(var name in legend) {
+    listItems.push('<div class=\'query-color\' style=\'background-color:'
+                    + legend[name] +'\'>&nbsp;</div>' + name);
+  }
 
-    $jit.id('id-list').innerHTML = '<li>' + listItems.join('</li><li>') + '</li>';
-  });
+  $jit.id('id-list').innerHTML = '<li>' + listItems.join('</li><li>') + '</li>';
 
   //end
   var button = $jit.id('update'),

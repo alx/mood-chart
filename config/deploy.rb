@@ -15,9 +15,9 @@ set :user, "alex"
 set :group, "alex"
 set :deploy_to, "/home/alex/#{application}"
 
-role :web, "moods.tetalab.org"                          # Your HTTP server, Apache/etc
-role :app, "moods.tetalab.org"                          # This may be the same as your `Web` server
-role :db,  "moods.tetalab.org", :primary => true # This is where Rails migrations will run
+set :domain, "88.191.126.74"
+server domain, :app, :web
+role :db, domain, :primary => true
 
 # if you're still using the script/reaper helper you will need
 # these http://github.com/rails/irs_process_scripts
