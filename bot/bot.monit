@@ -1,4 +1,9 @@
-check process tatibot with pidfile /var/run/tatibot.pid
-  start program = "/path/tatibot/script/bot_control start"
-  stop  program = "/path/tatibot/script/bot_control stop"
+check process tatibot with pidfile /home/alex/mood_chart/current/bot/bot.rb.pid
+  start program = "/bin/bash /home/alex/mood_chart/current/bot/monit_bot.sh start"
+    as uid alex and gid alex
+  stop program = "/bin/bash /home/alex/mood_chart/current/bot/monit_bot.sh stop"
+    as uid alex and gid alex
   if 5 restarts within 5 cycles then timeout
+  if cpu > 60% for 2 cycles then alert
+  if cpu > 80% for 5 cycles then restart
+  if totalmem > 200.0 MB for 5 cycles then restart

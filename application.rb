@@ -22,6 +22,10 @@ get '/' do
   erb :root
 end
 
+get '/:user' do
+  erb :profile
+end
+
 get '/mood.json' do
   content_type :json
   Profile.first.formatted_output.to_json

@@ -34,6 +34,7 @@ end
 task :link_shared_directories do     
   run "ln -s #{shared_path}/bot_config.yml #{release_path}/bot/bot_config.yml"
   run "ln -s #{shared_path}/production.db #{release_path}/production.db"
+  run "ln -s #{shared_path}/bot.rb.pid #{release_path}/bot/bot.rb.pid"
 end    
 
 after "deploy:update_code", :link_shared_directories
